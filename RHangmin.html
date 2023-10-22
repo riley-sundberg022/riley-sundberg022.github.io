@@ -58,7 +58,7 @@
 
                       // reduce the number of remaining tries by 1
                         tries = tries - 1
-                      $("#guesses").text("Guesses Left: "+tries);
+                      $("#guesses").text(" Guesses Left: "+tries);
 
                       // are they out of tries? then they lost!
                         if(tries <1) {
@@ -89,7 +89,13 @@
                       // check if the player has won the game
                           if ( ! blank.includes("-")) {
                             gameWon = true;
-                            $("#info").text("Wow! You WON!! Cuplaa! Why have a laptop, when you can have a hurdy gurdy? https://youtu.be/YV__C64Ni50?si=VXHtOwTZzhndApI3");
+                            $("#info").text("Wow! You WON!! Cuplaa! Why have a laptop, when you can have a hurdy gurdy? 
+                                            
+                                            
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YV__C64Ni50?si=_blqgGqRfYj_jISd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            
+                                            
+                                            ");
                             
                           }
                     }
