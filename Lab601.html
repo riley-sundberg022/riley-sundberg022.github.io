@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<title> My fourth web page!</title>
+
+<style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> 
+</script>
+  
+<script>
+
+  $(document). ready (function(){
+  //code section
+
+$("#button1").click(function(){
+  //click on does a thing!
+console.log("Clicked the 1st button);
+  $("button1").html ("Cosmic Crab")
+});
+    
+// doc ready end
+  });
+</script>
+  
+	body { width: 100% }
+  	#container {
+	width: 60%;
+	margin: auto;
+        background-color: lightgray;
+	padding: 30px;
+	}
+	
+	#photo { 
+		background-color: #f2ccff;
+		margin-left: 40%;
+		margin-right: 60%
+		float: center;
+		width: 200px;
+	}
+
+	#myphoto {
+		height: auto;
+		width: 150px;
+		border: 5px solid #ddd;
+		border-radius: 50%;
+		padding: 5px;
+		display: block;
+		margin: auto;
+	
+			}
+
+	      .caption {
+		font-size: 10pt;
+		font-family: time;
+		text-align: center;
+		text-style: italic;
+	      }
+		p, li, {
+			font-size: 10pt;
+			font-family: times;
+			background-color: #fefeee;
+			
+		}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: times;
+		background-color: #ffe6ff;
+		text-align: center;
+		font-size: 2em
+	}
+
+	h2 {
+		font-family: verdana, sans-serif;
+	         text-align: center;
+		font-size: 1.2em;
+	}
+	}
+
+	a {text-decoration: none;}
+	a:visited { background-color: #feeeee; }
+	a:link {background-color: #eeeefe }
+	a:hover {background-color: #fefeee; }
+	   
+	#thingsIlove { 
+		padding: 10px;
+		background-color:  #ffd699;
+		border:  2.5pt solid 
+		
+	
+	}
+
+	#classes { 
+		padding: 10px;
+		background-color:  #ffcc80;
+		border:  3pt solid 
+		  
+	}
+	
+	      
+</style>
+    
+  </head>
+   <body>
+     
+     <div id= container>
+  
+       <h1>My seventh page! Hooray!</h1>
+    
+  	 
+   	      <p> This is the sixth lab of GIS 3410, Web Mapping, from MSU Denver</p>
+    
+ 
+  <h2> About Me </h2>
+
+    <div id ="photo">    <img id="myphoto" src ="Ri.MP.jpg"> 
+      <p class= "caption"> Riley Sundberg </p>
+      <p class= "caption"> Credit: Author </p>
+    </div>
+
+      <div id = "thingsIlove">
+   	<p> Here are three things I love; </p>
+     	<ul>
+       	<li>Friends</li>
+         	<li>Family</li>
+         	<li> <button id = "button1">Click to reveal~~</button> </li>
+     	</ul>
+       </div>
+
+      <div id = "classes">
+ 	<p>Some other things about me- Classes I am taking this semester</p>
+ 	<ul>
+   	<li>Entomology</li>
+   	<li>Plant Taxonomy</li>
+   	<li>Issues in Conservation</li>
+   	<li>This class; web mapping</li>
+ 	</ul>
+      </div>
+        
+<p> Here is a link to learn about Colorado bats, which I also love. <a href="https://coloradobatwatch.org/about/"> Colorado Bat Watch </a> </p>
+ 
+   <div/>
+	   
+   </body>
+ 
+</html>
