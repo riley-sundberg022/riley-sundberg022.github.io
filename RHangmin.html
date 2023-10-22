@@ -27,7 +27,7 @@
 
               // this is the number of tries left
               tries = 10;
-              $("#guesses").text("Guesses left: " + tries);
+              $("#guesses").text("Solve for a ye ol' tale! Guesses left: " + tries);
 
               // boolean (true / false variable) to track if game has been won or lost
               gameWon = false;
@@ -46,7 +46,7 @@
                       console.log("clicked on " ,letter);
 
                     // make a line through the letter
-                      $(this).css("text-color", "white");
+                      $(this).css("color", "white");
                     // if the letter has already been clicked on, 
                     // let the user know it's already been tried
                     if (triedLetters.includes(letter)) {
