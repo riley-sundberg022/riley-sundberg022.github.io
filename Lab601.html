@@ -97,7 +97,9 @@ $("#button1").click( function() {
 console.log("Clicked the 1st button");
   $("#button1").html ("Cosmic Crab");
 });
-    
+    $("#hiddenphoto").click(function() {
+	    $("#hiddenphoto")
+    });
 // doc ready end
   });
 	
@@ -134,10 +136,12 @@ console.log("Clicked the 1st button");
          	<li> <button id = "button1">Click to reveal~~</button> </li>
      	</ul>
        </div>
-<img id ="aphoto">    <img id="crabphoto" src ="Crab.jpg"> 
+<button id = "hiddenphoto">CLick to see </button>
+	<div id ="photo"> <img id ="aphoto">   <img id="crabphoto" src ="Crab.jpg"> 
       <p class= "caption"> The Cosmic Crab </p>
-      <p class= "caption"> Credit: Nico Lormand </p>
+      <p class= "caption"> Credit: Art by Nico Lormand </p>
     </div>
+
       <div id = "classes">
  	<p>Some other things about me- Classes I am taking this semester</p>
  	<ul>
