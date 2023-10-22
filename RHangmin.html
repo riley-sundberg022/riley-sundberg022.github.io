@@ -87,8 +87,10 @@
                         }
                      
                       // check if the player has won the game
-
-
+                          if ( ! blank.includes("-")) {
+                            gameWon = true;
+                            $("#info").text("You WON!!");
+                        
                     }
 
                     // add the letter to letters already tried
