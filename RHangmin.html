@@ -61,7 +61,9 @@
                       $("#guesses").text("Guesses Left: "+tries);
 
                       // are they out of tries? then they lost!
-
+                        if(tries <1) {
+                          gameLost = true;
+                            $("#info").text("Sorry, you're out of guesses. You LOSE!");
                     
                     
                     // otherwise, put a line through it and
