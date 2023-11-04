@@ -23,10 +23,10 @@
         
             var circle =L.circle([51.508,-0.11], {
           	color: 'red',
-          	fillColor: '#f03'
-          	fillOpacity: 0.5,
-          	radius: 500
-        	}).addTo(map);
+          	fillColor: '#f03',
+          	fillOpacity: 0.5, 
+          	radius: 500 }).addTo(map);
+            
         	var polygon = L.polygon([
           	[51.509, -0.08],
            	[51.503, -0.06],
@@ -44,7 +44,10 @@
         	.openOn(map);
         	}
         	map.on('click', onMapClick);
-
+        
+            marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+            circle.bindPopup("I am a circle.");
+            polygon.bindPopup("I am a polygon.");
        
           </script>
   
