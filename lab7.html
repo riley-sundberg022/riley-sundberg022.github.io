@@ -20,7 +20,7 @@
      crossorigin=""></script>
     <div id="map"></div>
           <script>
-            var map = L.map('map').setView([51.505, -0.09], 13);
+            var map = L.map('map').setView([37.7789, -105.5553], 16);
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 19,
               attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -43,6 +43,10 @@
           	.setContent("I am a standalone popup.")
           	.openOn(map);
       	var popup = L.popup();
+
+            var marker = L.marker([37.7517, -105.5579]).addTo(map);
+        	marker.bindPopup("<b>Star Dune. One of the tallest dunes in North America, which can move almpost 50 feet per year due to winds!</b><br>I am a popup.").openPopup();
+
 
       	function onMapClick(e) {  popup
         	.setLatLng(e.latlng)
