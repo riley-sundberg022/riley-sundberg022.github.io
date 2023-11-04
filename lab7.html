@@ -20,7 +20,7 @@
      crossorigin=""></script>
     <div id="map"></div>
           <script>
-        var map = L.map('map').setView([37.7789, -105.5553], 13);
+        var map = L.map('map').setView([37.7789, -105.5553], 16);
       
          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -43,13 +43,8 @@
            	[37.7362,-105.5084],
           	[37.7401,-105.5167]
         	]).addTo(map);
-           polygon.bindPopup("I am a polygon.");
+           polygon.bindPopup("Parking lot and along this road.");
             
-        	var popup = L.popup()
-          	.setLatLng([37.7517, -,-105.5579])
-          	.setContent("")
-          	.openOn(map);
-      	var popup = L.popup();
 
       	function onMapClick(e) {  popup
         	.setLatLng(e.latlng)
