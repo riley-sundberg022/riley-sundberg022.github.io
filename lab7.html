@@ -25,7 +25,8 @@
               maxZoom: 19,
               attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
               }).addTo(map);
-            var circle =L.circle([37.4741,-105.5862], {
+            
+            var circle = L.circle([37.74629,-105.50490], {
           	color: 'red',
           	fillColor: '#f03',
           	fillOpacity: 0.5, 
@@ -44,7 +45,7 @@
             var marker = L.marker([37.7517, -105.5579]).addTo(map);
         	marker.bindPopup("<b>Star Dune. One of the tallest dunes in North America, which can move almpost 50 feet per year due to winds!</b><br>I am a popup.").openPopup();
 
-
+        var popup = L.popup();
       	function onMapClick(e) {  popup
         	.setLatLng(e.latlng)
         	.setContent("You clicked the map at " + e.latlng.toString())
