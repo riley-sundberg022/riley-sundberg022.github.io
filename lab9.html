@@ -100,6 +100,9 @@ function style1(feature) {
 	//convert the file (data) into a layer
 	    acsDenver2021Layer = L.geoJSON(data,
 					   {style: style1}).addTo(map);
+	                        onEachFeature : function(feature, layer) {
+					layer.bindPopup("Percent Poverty: " +
+							feature.properties.PCT_POVERTY + "%");
 	      //move map to data area
 	   	 map.panTo(acsDenver2021Layer.getBounds().getCenter());
     });
