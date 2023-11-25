@@ -74,15 +74,14 @@
 
 // adding style to geojason
 function style1(feature) {
-	d = feature.properties.PCT_POVERTY;
-	answer = d > 30 ? '#80026' :
-		d > 20 ? '#DB0026' :
-		d > 15 ? '#E31A1C' : 
-		d > 10 ? '#FC4E2A' : 
-		d > 5 ? '#FD8D3C' : 
-		d > 3 ? '#FEB24C' : 
-		d > 1 ? '#FED976' : 
-			'#FFEDA0';
+	d = feature.properties.PCT_AGELESS18;
+	answer = d > 28 ? '#4a1486' :
+		d > 20 ? '#6a51a3' :
+		d > 15 ? '#807dba' : 
+		d > 10 ? '#9e9ac8' : 
+		d > 5 ? '#bcbddc' : 
+		d > 1 ? '#dadaeb' : 
+			'#f2f0f7';
 	style = {
 		fillColor : answer,
 		weight    : 1,
@@ -99,8 +98,8 @@ function style1(feature) {
 	    acsDenver2021Layer = L.geoJSON(data,
 					   {style: style1,
 	                        onEachFeature : function(feature, layer) {
-					layer.bindPopup("Percent Poverty: " +
-							feature.properties.PCT_POVERTY + "%");
+					layer.bindPopup("Percent Younger than 18: " +
+							feature.properties.PCT_AGELESS18 + "%");
 				}
 		  			  }).addTo(map);
 	      //move map to data area
@@ -125,7 +124,7 @@ function style1(feature) {
 
 
 <div id="header">
-	<h1><a href="https://www.census.gov/programs-surveys/acs">Denver 2021 American Community Survey (Census) data</a></h1>
+	<h1><a href="https://www.census.gov/programs-surveys/acs">Denver 2021 data; Percent Neighboorood Younger Than 18 </a></h1>
 	<p>Data from <a href="https://denvergov.org/opendata/dataset/city-and-county-of-denver-american-community-survey-blk-grp-2017-2021">Denver Open Data</a></p>
 </div>
 <div id="map"></div>
