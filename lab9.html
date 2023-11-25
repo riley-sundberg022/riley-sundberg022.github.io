@@ -99,7 +99,7 @@ function style1(feature) {
 					   {style: style1,
 	                        onEachFeature : function(feature, layer) {
 					layer.bindPopup("Percent Younger than 18: " +
-							(Math.round(feature.properties.PCT_AGELESS18) + "%");
+							(Math.round(feature.properties.PCT_AGELESS18)) + "%");
 				}
 		  			  }).addTo(map);
 	      //move map to data area
