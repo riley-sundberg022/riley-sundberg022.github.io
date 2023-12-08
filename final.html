@@ -95,7 +95,7 @@ function style1(feature) {
 		// let's add the Denver ACS data -- ##4 he
     $.getJSON('./BLM_CO_National_Monuments_and_National_Conservation_Areas.geojson', function(data) {
 	//convert the file (data) into a layer
-	    acsDenver2021Layer = L.geoJSON(data,
+	    COconservationAreas = L.geoJSON(data,
 					   {style: style1,
 	                        onEachFeature : function(feature, layer) {
 					layer.bindPopup("Percent Younger than 18: " +
@@ -103,7 +103,7 @@ function style1(feature) {
 				}
 		  			  }).addTo(map);
 	      //move map to data area
-	   	 map.panTo(acsDenver2021Layer.getBounds().getCenter());
+	   	 map.panTo(COconservationAreas.getBounds().getCenter());
     });
 		
 		// let's try to add some remote DRCOG data
@@ -111,7 +111,7 @@ function style1(feature) {
 			newLayer = L.geoJSON(data);
 			layerControl.addOverlay(newLayer, "Highway Markers");
 		// add map to layer controls
-		layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
+		layerControl.addOverlay(COconservationAreas, "Conservation Areas");
 		});
 
 
@@ -122,9 +122,10 @@ function style1(feature) {
 </head>
 <body>
 
-
+  // /BLM_CO_National_Monuments_and_National_Conservation_Are
+	
 <div id="header">
-	<h1><a href="https://www.census.gov/programs-surveys/acs">Denver 2021 data; Percent Neighboorood Younger Than 18 </a></h1>
+	<h1><a href="https://www.census.gov/programs-surveys/acs">Colorados BLM National Monuments and Conservation Area </a></h1>
 	<p>Data from <a href="https://denvergov.org/opendata/dataset/city-and-county-of-denver-american-community-survey-blk-grp-2017-2021">Denver Open Data</a></p>
 </div>
 <div id="map"></div>
