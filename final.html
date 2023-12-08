@@ -74,14 +74,9 @@
 
 // adding style to geojason
 function style1(feature) {
-	d = feature.properties.PCT_AGELESS18;
+	d = feature.properties.NLCS_NAME;
 	answer = d > 28 ? '#4a1486' :
-		d > 20 ? '#6a51a3' :
-		d > 15 ? '#807dba' : 
-		d > 10 ? '#9e9ac8' : 
-		d > 5 ? '#bcbddc' : 
-		d > 1 ? '#dadaeb' : 
-			'#f2f0f7';
+		
 	style = {
 		fillColor : answer,
 		weight    : 1,
