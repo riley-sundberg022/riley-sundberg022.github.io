@@ -93,7 +93,7 @@ function style1(feature) {
 	return style;
 }
 		// let's add the Denver ACS data -- ##4 he
-    $.getJSON('./acs_denver_2021.geojson', function(data) {
+    $.getJSON('./BLM_CO_National_Monuments_and_National_Conservation_Areas.geojson', function(data) {
 	//convert the file (data) into a layer
 	    acsDenver2021Layer = L.geoJSON(data,
 					   {style: style1,
