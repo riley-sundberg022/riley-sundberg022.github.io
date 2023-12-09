@@ -93,12 +93,12 @@ function style1(feature) {
 	    COconservationAreas = L.geoJSON(data,
 					   {style: style1,
 	                        onEachFeature : function(feature, layer) {
-					layer.bindPopup("Percent Younger than 18: " +
-							(Math.round(feature.properties.PCT_AGELESS18)) + "%");
+					layer.bindPopup(
+							(feature.properties.NLCS_NAME) );
 				}
 		  			  }).addTo(map);
 	      //move map to data area
-	   	 map.panTo(COconservationAreas.getBounds().getCenter());
+	   	 map.panTo(./BLM_CO_National_Monuments_and_National_Conservation_Areas.geojson.getBounds().getCenter());
     });
 		
 		// let's try to add some remote DRCOG data
