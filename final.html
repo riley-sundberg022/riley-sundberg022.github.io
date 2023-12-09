@@ -43,15 +43,17 @@
 
 <script>
 
-	$("#button1").click( function() {
-	  //click on does a thing!
-	console.log("Clicked the 1st button");
-  	$("#buttonBeGone").html ("Click on the area to see the conservation area name!") });
+	
 	
         // the document ready wraps our javascript
 	// to make sure that everything loads in the 
 	// right order
 	$(document).ready(function() {
+	 //add button
+		$("#button1").click( function() {
+	  //click on does a thing!
+	console.log("Clicked the 1st button");
+  	$("#buttonBeGone").html ("Click on the area to see the conservation area name!") });
 
 		// let's create our basemap! -- ##1 here
 	map = L.map('map').setView([0,0], 7);
@@ -124,9 +126,10 @@ function style1(feature) {
 	
 <div id="header">
 	<h1><a href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-co-national-monuments-and-national-conservation-areas/about">Colorados BLM National Monuments and Conservation Area </a></h1>
-	<p>Data from <a href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-co-national-monuments-and-national-conservation-areas/about">Burea of Land Management</a></p>
+	<p>Data from <a href="https://gbp-blm-egis.hub.arcgis.com/datasets/BLM-EGIS::blm-co-national-monuments-and-national-conservation-areas/about">Burea of Land Management</a>
 	
 	 <div id = "buttonBeGone" > <button id = "button1"> Click to reveal a trick </button><div/>
+		 </p>
 </div>
 <div id="map"></div>
 <p>
