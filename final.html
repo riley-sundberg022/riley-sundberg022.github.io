@@ -43,6 +43,11 @@
 
 <script>
 
+	$("#button1").click( function() {
+	  //click on does a thing!
+	console.log("Clicked the 1st button");
+  	$("#buttonBeGone").html ("Click on the area to see the conservation area name!") });
+	
         // the document ready wraps our javascript
 	// to make sure that everything loads in the 
 	// right order
@@ -108,11 +113,6 @@ function style1(feature) {
 		layerControl.addOverlay(COconservationAreas, "Conservation Areas");
 		});
 
-	$("#button1").click( function() {
-	  //click on does a thing!
-	console.log("Clicked the 1st button");
-  	$("#buttonBeGone").html ("Click on the area to see the conservation area name!") });
-	
 	// end document ready
 	});
  //Add button for info
